@@ -1,38 +1,28 @@
-# python-dsa-inventory
-Event Ticket Inventory CLI Engine implementing Bubble Sort and Binary Search in Python 3.
+# Event Ticket Inventory Engine (Python 3 + DSA)
 
-<!-- 
-  PROJECT TITLE & SUMMARY
-  Every project README starts with the exact application name and a clear 
-  explanation of what business problem the software solves.
--->
-# Interactive Event POS & DOM Visual Sandbox
-
-A client-side Point-of-Sale (POS) and data-inspection web application built with **Vanilla JavaScript (ES6+)**, **HTML5**, and **CSS3**. This project demonstrates real-time Document Object Model (DOM) manipulation, strict-mode memory safety, explicit type conversion, and multi-branch conditional routing without external framework dependencies.
+A command-line ticket inventory management utility written in **Python 3**. This project combines core Python data structures (lists of dictionaries) with fundamental computer science algorithms (**Bubble Sort** and **Binary Search**) to organize and query event seating records efficiently.
 
 ---
 
-<!-- 
-  ARCHITECTURE & SYLLABUS ALIGNMENT
-  Lists the exact programming mechanics inside your code so a senior engineer 
-  knows what concepts you have mastered (JSE-40-01 & WDE-40-01).
--->
-## Core Engineering Concepts Demonstrated
-- **Strict Mode Execution (`"use strict";`):** Prevents undeclared global variable leaks and catches silent runtime defects early.
-- **Explicit vs. Implicit Type Coercion:** Safely converts raw HTML string inputs (`String`) into mathematical primitives (`Number()`) before executing invoice arithmetic.
-- **Complex Data Structures:** Models customer profiles using JavaScript Objects (key-value pairs) and dynamic shopping carts using Arrays (`.push()`).
-- **Control Flow & Branching:** Implements Guard Clauses (`if`), multi-tier age concession ladders (`if-else-if`), inline ternary badge assignments (`? :`), and strict-equality venue routing (`switch-case`).
-- **Modular Functions & Encapsulation:** Uses parameterized functions, local variable isolation, `return` statements, and scope shadowing protection.
+## Algorithmic Complexity & Architecture
+- **Data Representation:** Stores event records as a dynamic Python `list` of `dict` objects containing ticket codes, event names, and float pricing.
+- **Bubble Sort (`bubble_sort_tickets`):**
+  - **Mechanism:** Iteratively steps through the inventory list, compares adjacent ticket codes, and swaps unordered elements in-place using Python tuple unpacking (`a, b = b, a`).
+  - **Time Complexity:** $O(n^2)$ worst-case and average-case complexity; $O(1)$ auxiliary space complexity.
+- **Binary Search (`binary_search_ticket`):**
+  - **Mechanism:** Requires a sorted collection. Repeatedly divides the search interval in half using integer floor division (`//`) to locate a target ticket code without scanning every record.
+  - **Time Complexity:** $O(\log n)$ logarithmic time complexity—dramatically faster than $O(n)$ Linear Search for large datasets.
 
 ---
 
-<!-- 
-  PROJECT FILE STRUCTURE
-  Triple backticks (```) create a clean directory map showing how the files connect.
--->
-## Project Structure
-```text
-js-pos-sandbox/
-├── index.html       # Semantic HTML5 interface and CSS3 dark-mode dashboard styling
-├── app.js           # Strict-mode ES6 JavaScript business logic and DOM event listeners
-└── README.md        # Project documentation and execution guide
+## How to Run Locally
+1. Ensure **Python 3.10+** is installed on your system:
+   ```bash
+   python --version
+
+#Clone this repository and navigate into the project directory:
+          git clone [https://github.com/](https://github.com/)[your-github-username]/python-dsa-inventory.git
+          cd python-dsa-inventory
+
+#Execute the script in your terminal:
+                                    python inventory_dsa.py
